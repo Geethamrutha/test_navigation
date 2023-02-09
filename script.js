@@ -5,16 +5,6 @@ function loadiFrame(url) {
     document.body.appendChild(x);
 }
 
-function sendMessage() {
-    /**
-     * Use data object and postMessage to URL provided (postMessage to child frame)
-     * @param {Object} data - data to be sent to url provided of child frame
-     * @returns - no return
-     */
-
-    var receiverElem = document.getElementById('receiver').contentWindow;
-    receiverElem.postMessage({actionType: 'ameliaConversationAttributes', actionData: {test: 'testing some stuff'}}, "https://bcbsma.demo.amelia.com/Amelia/ui/BSBSMA/chat");
-}
 
 async function grabData() {
     await fetch("properties.json")
